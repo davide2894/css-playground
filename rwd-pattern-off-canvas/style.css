@@ -1,0 +1,46 @@
+/* ensure wrapper takes full screen  */
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+main {
+  background: lightblue;
+  height: 100%;
+}
+.toggle-nav {
+  font-size: 2em;
+  color: black;
+}
+/* navbar must be outside viewport with a smooth transition */
+nav {
+  width: 300px;
+  background: darkblue;
+  height: 100%;
+  position: absolute;
+  -webkit-transform: translate(-300px, 0);
+  transform: translate(-300px, 0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+/* class to toggle when "Toggle Nav" is open */
+nav.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+/* "X" to click navbar closing */
+.x-nav{
+  color: white;
+  font-size: 2em;
+}
+/* class that closes navbar */
+nav.close {
+  -webkit-transform: translate(-300px, 0);
+  transform: translate(-300px, 0);
+}
+
+
+
